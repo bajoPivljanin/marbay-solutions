@@ -14,6 +14,7 @@ import {
 import PricingComparison from "../components/PricingComparison";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import ContactForm from "../components/ContactForm";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/i18n.config";
 
@@ -183,56 +184,7 @@ export default async function Page({ params }: { params: Promise<{ lang: Locale 
             </div>
           </div>
           <div className="bg-surface p-8 lg:p-12 border border-outline-variant/30 w-full">
-            <form className="flex flex-col gap-8">
-              <div className="relative pt-4">
-                <input 
-                  className="w-full bg-transparent border-0 border-b border-outline/40 py-2 focus:ring-0 focus:border-primary transition-colors peer text-on-surface focus:outline-none" 
-                  id="name" 
-                  placeholder=" " 
-                  required 
-                  type="text" 
-                />
-                <label 
-                  className="absolute left-0 top-6 font-label-caps text-label-caps text-on-surface-variant transition-all peer-focus:top-0 peer-focus:text-[10px] peer-focus:text-primary peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[10px] uppercase pointer-events-none" 
-                  htmlFor="name"
-                >
-                  {dict.connect.name}
-                </label>
-              </div>
-              <div className="relative pt-4">
-                <input 
-                  className="w-full bg-transparent border-0 border-b border-outline/40 py-2 focus:ring-0 focus:border-primary transition-colors peer text-on-surface focus:outline-none" 
-                  id="email" 
-                  placeholder=" " 
-                  required 
-                  type="email" 
-                />
-                <label 
-                  className="absolute left-0 top-6 font-label-caps text-label-caps text-on-surface-variant transition-all peer-focus:top-0 peer-focus:text-[10px] peer-focus:text-primary peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[10px] uppercase pointer-events-none" 
-                  htmlFor="email"
-                >
-                  {dict.connect.email}
-                </label>
-              </div>
-              <div className="relative pt-4">
-                <textarea 
-                  className="w-full bg-transparent border-0 border-b border-outline/40 py-2 focus:ring-0 focus:border-primary transition-colors peer text-on-surface resize-none focus:outline-none" 
-                  id="message" 
-                  placeholder=" " 
-                  required 
-                  rows={3} 
-                />
-                <label 
-                  className="absolute left-0 top-6 font-label-caps text-label-caps text-on-surface-variant transition-all peer-focus:top-0 peer-focus:text-[10px] peer-focus:text-primary peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[10px] uppercase pointer-events-none" 
-                  htmlFor="message"
-                >
-                  {dict.connect.details}
-                </label>
-              </div>
-              <button className="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-8 py-4 rounded hover:bg-surface-tint transition-colors duration-300 w-full mt-4" type="submit">
-                {dict.connect.submit}
-              </button>
-            </form>
+            <ContactForm dict={dict} />
           </div>
         </div>
       </section>
