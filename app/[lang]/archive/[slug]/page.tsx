@@ -42,7 +42,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               </div>
               <h1 className="font-display-md-mobile text-display-md-mobile md:font-display-md md:text-display-md mb-8 text-on-surface">{project.title}</h1>
               <div className="w-16 h-px bg-tertiary mb-8"></div>
-              <p className="font-body-lg text-body-lg text-on-surface-variant mb-10">{project.fullDescription}</p>
+              <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 whitespace-pre-wrap">{(project.fullDescription as any)[lang] || project.fullDescription}</p>
               <div className="mt-4">
                 <h3 className="font-label-caps text-label-caps text-tertiary uppercase mb-4">{dict.archive.techUsed}</h3>
                 <div className="flex flex-wrap gap-2">
@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <h2 className="font-headline-md text-headline-md text-on-surface mb-6">{dict.archive.theChallenge}</h2>
           </div>
           <div className="md:col-span-8 md:col-start-5">
-            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">{(project as any).challenge}</p>
+            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">{(project as any).challenge?.[lang] || (project as any).challenge}</p>
           </div>
         </section>
       )}
@@ -89,7 +89,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
           <div className="md:col-span-5">
             <h2 className="font-headline-md text-headline-md text-on-surface mb-6">{dict.archive.theSolution}</h2>
-            <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed whitespace-pre-wrap">{(project as any).solution}</p>
+            <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed whitespace-pre-wrap">{(project as any).solution?.[lang] || (project as any).solution}</p>
           </div>
           {(project as any).solutionImage && (
             <div className="md:col-span-6 md:col-start-7 mt-12 md:mt-0">

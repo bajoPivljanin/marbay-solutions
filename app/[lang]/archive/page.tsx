@@ -60,7 +60,7 @@ export default async function ArchivePage({ params }: { params: Promise<{ lang: 
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-headline-sm text-headline-sm mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant max-w-md">{project.shortDescription}</p>
+                  <p className="font-body-md text-body-md text-on-surface-variant max-w-md">{(project.shortDescription as any)[lang] || project.shortDescription}</p>
                 </div>
                 <ExternalLink className="w-5 h-5 text-on-surface-variant group-hover:text-primary transition-colors" />
               </div>
