@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowLeft } from "lucide-react";
+import { ArrowRight, ArrowLeft, MonitorSmartphone, Search, Layout, Target, PenTool, LineChart, GitMerge, Code, Database } from "lucide-react";
 import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "../../components/SiteFooter";
 import { getDictionary } from "@/lib/dictionary";
@@ -49,82 +49,123 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
         </section>
 
         {/* Services Section */}
-        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
-          <div className="space-y-32">
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-24 md:pt-32 lg:pt-40 pb-section-gap">
+          <div className="space-y-32 md:space-y-48 lg:space-y-64">
+            
             {/* Service 1 */}
-            <article className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start border-t border-outline-variant/30 pt-16">
-              <div className="md:col-span-1 flex flex-col items-center">
+            <article className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter items-start">
+              <div className="md:col-span-1">
                 <span className="font-label-caps text-label-caps text-tertiary-fixed-dim">01</span>
-                <div className="w-px h-16 bg-outline-variant/30 mt-4"></div>
               </div>
-              <div className="md:col-span-5">
-                <div className="aspect-[4/5] bg-surface-container-low border border-outline-variant/30 p-2 relative overflow-hidden group">
-                  <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwq-G_3jlqBadA8dsTgC44Qf3pv71I-cxNHGcHgGlxSfO8VTisSVcpgmHyb6ZslzK40hwcS7iuHjxAFeIjO9HJcDyNSn2e8aEL_0juh86qtakg-6aA90fGkNV109oauy7Nj4uva0xQ06Ft7IQgJftO1QKD9R20FR0hlQZp3q1mgvyZUXngQsNLkT_XBwRJfrKIEmCpzk8dxJ8RCfvyQySaXw5Y4UjHgC6UieksvAxMvQyNVb_8tGRyzWe52IEMfvVJeSG4tZ0Ny0A" alt="Custom Web Applications" fill referrerPolicy="no-referrer" className="object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 ease-in-out" />
-                </div>
+              <div className="md:col-span-6">
+                <h2 className="font-headline-md text-3xl md:text-4xl text-primary mb-6">{dict.services.webDevTitle}</h2>
+                <p className="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                  {dict.services.webDevDesc}
+                </p>
               </div>
-              <div className="md:col-span-5 md:col-start-8 flex flex-col justify-center h-full">
-                <h2 className="font-headline-md text-headline-md text-primary mb-6">{dict.services.webAppsTitle}</h2>
-                <p className="font-body-md text-body-md text-on-surface-variant mb-8">{dict.services.webAppsDesc}</p>
-                <div className="border-t border-outline-variant/30 pt-6">
-                  <h3 className="font-label-caps text-label-caps text-tertiary mb-4">{dict.services.deliverables}</h3>
-                  <ul className="space-y-4">
-                    <li className="font-body-md text-body-md text-on-surface flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>{dict.services.userFlow}</li>
-                    <li className="font-body-md text-body-md text-on-surface flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>{dict.services.apiIntegration}</li>
-                    <li className="font-body-md text-body-md text-on-surface flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>{dict.services.dbArch}</li>
-                  </ul>
-                </div>
+              <div className="md:col-span-4 md:col-start-9">
+                <h3 className="font-label-caps text-[10px] uppercase tracking-widest text-tertiary mb-6 border-b border-outline-variant/30 pb-2">
+                  {dict.services.deliverables}
+                </h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <MonitorSmartphone className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.responsive}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <Search className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.seo}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <Layout className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.cms}</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </article>
 
             {/* Service 2 */}
-            <article className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start border-t border-outline-variant/30 pt-16">
-              <div className="md:col-span-1 flex flex-col items-center md:order-last">
+            <article className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter items-start pt-16 md:pt-0 border-t border-outline-variant/30 md:border-t-0">
+              <div className="md:col-span-1">
                 <span className="font-label-caps text-label-caps text-tertiary-fixed-dim">02</span>
-                <div className="w-px h-16 bg-outline-variant/30 mt-4"></div>
               </div>
-              <div className="md:col-span-5 md:col-start-2 flex flex-col justify-center h-full md:order-1">
-                <h2 className="font-headline-md text-headline-md text-primary mb-6">{dict.services.webDevTitle}</h2>
-                <p className="font-body-md text-body-md text-on-surface-variant mb-8">{dict.services.webDevDesc}</p>
-                <div className="border-t border-outline-variant/30 pt-6">
-                  <h3 className="font-label-caps text-label-caps text-tertiary mb-4">{dict.services.deliverables}</h3>
-                  <ul className="space-y-4">
-                    <li className="font-body-md text-body-md text-on-surface flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>{dict.services.responsive}</li>
-                    <li className="font-body-md text-body-md text-on-surface flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>{dict.services.seo}</li>
-                    <li className="font-body-md text-body-md text-on-surface flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>{dict.services.cms}</li>
-                  </ul>
-                </div>
+              <div className="md:col-span-6">
+                <h2 className="font-headline-md text-3xl md:text-4xl text-primary mb-6">{dict.services.adsTitle}</h2>
+                <p className="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                  {dict.services.adsDesc}
+                </p>
               </div>
-              <div className="md:col-span-5 md:col-start-7 md:order-2">
-                <div className="aspect-[4/5] bg-surface-container-low border border-outline-variant/30 p-2 relative overflow-hidden group">
-                  <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwq-G_3jlqBadA8dsTgC44Qf3pv71I-cxNHGcHgGlxSfO8VTisSVcpgmHyb6ZslzK40hwcS7iuHjxAFeIjO9HJcDyNSn2e8aEL_0juh86qtakg-6aA90fGkNV109oauy7Nj4uva0xQ06Ft7IQgJftO1QKD9R20FR0hlQZp3q1mgvyZUXngQsNLkT_XBwRJfrKIEmCpzk8dxJ8RCfvyQySaXw5Y4UjHgC6UieksvAxMvQyNVb_8tGRyzWe52IEMfvVJeSG4tZ0Ny0A" alt="Website Development" fill referrerPolicy="no-referrer" className="object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 ease-in-out" />
-                </div>
+              <div className="md:col-span-4 md:col-start-9">
+                <h3 className="font-label-caps text-[10px] uppercase tracking-widest text-tertiary mb-6 border-b border-outline-variant/30 pb-2">
+                  {dict.services.deliverables}
+                </h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <Target className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.targeting}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <PenTool className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.creative}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <LineChart className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.reporting}</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </article>
 
             {/* Service 3 */}
-            <article className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start border-t border-outline-variant/30 pt-16">
-              <div className="md:col-span-1 flex flex-col items-center">
+            <article className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter items-start pt-16 md:pt-0 border-t border-outline-variant/30 md:border-t-0">
+              <div className="md:col-span-1">
                 <span className="font-label-caps text-label-caps text-tertiary-fixed-dim">03</span>
-                <div className="w-px h-16 bg-outline-variant/30 mt-4"></div>
               </div>
-              <div className="md:col-span-5">
-                <div className="aspect-[4/5] bg-surface-container-low border border-outline-variant/30 p-2 relative overflow-hidden group">
-                  <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwq-G_3jlqBadA8dsTgC44Qf3pv71I-cxNHGcHgGlxSfO8VTisSVcpgmHyb6ZslzK40hwcS7iuHjxAFeIjO9HJcDyNSn2e8aEL_0juh86qtakg-6aA90fGkNV109oauy7Nj4uva0xQ06Ft7IQgJftO1QKD9R20FR0hlQZp3q1mgvyZUXngQsNLkT_XBwRJfrKIEmCpzk8dxJ8RCfvyQySaXw5Y4UjHgC6UieksvAxMvQyNVb_8tGRyzWe52IEMfvVJeSG4tZ0Ny0A" alt="Meta Advertising" fill referrerPolicy="no-referrer" className="object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 ease-in-out" />
-                </div>
+              <div className="md:col-span-6">
+                <h2 className="font-headline-md text-3xl md:text-4xl text-primary mb-6">{dict.services.webAppsTitle}</h2>
+                <p className="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                  {dict.services.webAppsDesc}
+                </p>
               </div>
-              <div className="md:col-span-5 md:col-start-8 flex flex-col justify-center h-full">
-                <h2 className="font-headline-md text-headline-md text-primary mb-6">{dict.services.adsTitle}</h2>
-                <p className="font-body-md text-body-md text-on-surface-variant mb-8">{dict.services.adsDesc}</p>
-                <div className="border-t border-outline-variant/30 pt-6">
-                  <h3 className="font-label-caps text-label-caps text-tertiary mb-4">{dict.services.deliverables}</h3>
-                  <ul className="space-y-4">
-                    <li className="font-body-md text-body-md text-on-surface flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>{dict.services.targeting}</li>
-                    <li className="font-body-md text-body-md text-on-surface flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>{dict.services.creative}</li>
-                    <li className="font-body-md text-body-md text-on-surface flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>{dict.services.reporting}</li>
-                  </ul>
-                </div>
+              <div className="md:col-span-4 md:col-start-9">
+                <h3 className="font-label-caps text-[10px] uppercase tracking-widest text-tertiary mb-6 border-b border-outline-variant/30 pb-2">
+                  {dict.services.deliverables}
+                </h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <GitMerge className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.userFlow}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <Code className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.apiIntegration}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <Database className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.dbArch}</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </article>
+
           </div>
         </section>
 
