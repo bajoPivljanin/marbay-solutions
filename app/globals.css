@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body {
+    width: 100%;
+    overflow-x: clip;
+  }
+}
+
+@theme {
+  --color-outline: #747872;
+  --color-on-surface: #1b1c19;
+  --color-surface-bright: #fbf9f4;
+  --color-surface-container-low: #f5f3ee;
+  --color-on-tertiary-fixed: #1f1b15;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-secondary-fixed-variant: #6f3725;
+  --color-surface-container-high: #eae8e3;
+  --color-on-primary: #ffffff;
+  --color-error: #ba1a1a;
+  --color-inverse-primary: #bccbb9;
+  --color-on-tertiary-fixed-variant: #4c463f;
+  --color-surface-container: #f0eee9;
+  --color-tertiary: #565049;
+  --color-inverse-on-surface: #f2f1ec;
+  --color-primary-container: #5f6d5e;
+  --color-on-error: #ffffff;
+  --color-on-tertiary-container: #f3e8df;
+  --color-inverse-surface: #30312e;
+  --color-background: #fbf9f4;
+  --color-secondary: #8c4e3a;
+  --color-tertiary-fixed: #ebe1d7;
+  --color-primary: #475547;
+  --color-outline-variant: #c4c8c0;
+  --color-on-secondary: #ffffff;
+  --color-tertiary-container: #6f6861;
+  --color-tertiary-fixed-dim: #cec5bc;
+  --color-surface-dim: #dbdad5;
+  --color-surface-container-highest: #e4e2dd;
+  --color-primary-fixed: #d8e7d4;
+  --color-on-background: #1b1c19;
+  --color-on-error-container: #93000a;
+  --color-on-primary-fixed-variant: #3d4a3d;
+  --color-surface-variant: #e4e2dd;
+  --color-primary-fixed-dim: #bccbb9;
+  --color-on-primary-fixed: #121e13;
+  --color-secondary-fixed: #ffdbd0;
+  --color-secondary-fixed-dim: #ffb59f;
+  --color-on-secondary-container: #793e2c;
+  --color-secondary-container: #fead95;
+  --color-surface: #fbf9f4;
+  --color-on-surface-variant: #444842;
+  --color-on-tertiary: #ffffff;
+  --color-on-primary-container: #dfeedc;
+  --color-surface-tint: #546253;
+  --color-on-secondary-fixed: #380d02;
+  --color-error-container: #ffdad6;
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  --spacing-margin-desktop: 64px;
+  --spacing-unit: 8px;
+  --spacing-gutter: 32px;
+  --spacing-section-gap: 128px;
+  --spacing-container-max: 1200px;
+  --spacing-margin-mobile: 24px;
+
+  --font-display-lg-mobile: var(--font-caslon), serif;
+  --font-display-lg: var(--font-caslon), serif;
+  --font-headline-sm: var(--font-caslon), serif;
+  --font-headline-md: var(--font-caslon), serif;
+  --font-body-md: var(--font-dm), sans-serif;
+  --font-body-lg: var(--font-dm), sans-serif;
+  --font-label-caps: var(--font-dm), sans-serif;
+}
+
+@utility text-display-lg-mobile {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+@utility text-display-lg {
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+@utility text-headline-sm {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+@utility text-headline-md {
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+@utility text-body-md {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@utility text-body-lg {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@utility text-label-caps {
+  font-size: 12px;
+  line-height: 1.0;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
