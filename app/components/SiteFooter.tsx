@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Bitcoin } from "lucide-react";
 
 type FooterLabels = {
   copyright: string;
@@ -6,6 +7,7 @@ type FooterLabels = {
   terms: string;
   linkedin: string;
   instagram: string;
+  crypto: string;
 };
 
 type SiteFooterProps = {
@@ -52,6 +54,12 @@ export default function SiteFooter({ lang, footer }: SiteFooterProps) {
             {footer.instagram}
           </Link>
         </nav>
+      </div>
+      <div className="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop mt-8 pt-6 border-t border-zinc-800">
+        <p className="flex items-center gap-2 font-body-md text-body-md text-sm text-zinc-500">
+          <Bitcoin className="w-4 h-4 shrink-0" strokeWidth={1.5} />
+          {footer.crypto}
+        </p>
       </div>
     </footer>
   );
