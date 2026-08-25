@@ -40,7 +40,9 @@
     "customCms": "CUSTOM CMS DEVELOPMENT",
     "customCmsDesc": "Bespoke content management systems tailored to your editorial process — free of the bloat that comes with generic platforms.",
     "aiAuto": "AI AUTOMATION",
-    "aiAutoDesc": "Automating repetitive business processes with artificial intelligence, from internal workflows to customer support."
+    "aiAutoDesc": "Automating repetitive business processes with artificial intelligence, from internal workflows to customer support.",
+    "prevSlide": "Previous service",
+    "nextSlide": "Next service"
   },
   "pricing": {
     "title": "Investment Plans",

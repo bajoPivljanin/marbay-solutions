@@ -40,7 +40,9 @@
     "customCms": "IZRADA CUSTOM CMS-A",
     "customCmsDesc": "Namenski sistemi za upravljanje sadržajem, skrojeni prema vašem uređivačkom procesu — bez nepotrebnog balasta generičkih platformi.",
     "aiAuto": "AI AUTOMATIZACIJA",
-    "aiAutoDesc": "Automatizacija ponavljajućih poslovnih procesa uz pomoć veštačke inteligencije, od radnih tokova do korisničke podrške."
+    "aiAutoDesc": "Automatizacija ponavljajućih poslovnih procesa uz pomoć veštačke inteligencije, od radnih tokova do korisničke podrške.",
+    "prevSlide": "Prethodna usluga",
+    "nextSlide": "Sledeća usluga"
   },
   "pricing": {
     "title": "Planovi Usluga",

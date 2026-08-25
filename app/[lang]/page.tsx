@@ -16,6 +16,7 @@ import {
   Workflow
 } from "lucide-react";
 import PricingComparison from "../components/PricingComparison";
+import ServiceCarousel from "../components/ServiceCarousel";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import ContactForm from "../components/ContactForm";
@@ -57,66 +58,45 @@ export default async function Page({ params }: { params: Promise<{ lang: Locale 
       </section>
 
       {/* Our Capabilities */}
-      <section className="bg-surface-container-low py-section-gap w-full">
+      <section className="bg-surface-container-low py-section-gap w-full overflow-hidden">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <h2 className="font-headline-md text-headline-md mb-16 text-center text-on-surface">{dict.capabilities.title}</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
-            {/* Capability 1 */}
-            <div className="bg-surface p-10 border border-outline-variant/30 group hover:bg-surface-bright transition-colors duration-500">
-              <Blocks className="w-10 h-10 text-primary mb-6" />
-              <h3 className="font-headline-sm text-headline-sm mb-4">{dict.capabilities.webApps}</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-6">
-                {dict.capabilities.webAppsDesc}
-              </p>
-              <div className="h-32 border border-outline/20 relative overflow-hidden flex items-center justify-center bg-surface-container-lowest">
-                <Network className="w-16 h-16 text-tertiary/50" />
-              </div>
-            </div>
-            {/* Capability 2 */}
-            <div className="bg-surface p-10 border border-outline-variant/30 group hover:bg-surface-bright transition-colors duration-500">
-              <AppWindow className="w-10 h-10 text-primary mb-6" />
-              <h3 className="font-headline-sm text-headline-sm mb-4">{dict.capabilities.webDev}</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-6">
-                {dict.capabilities.webDevDesc}
-              </p>
-              <div className="h-32 border border-outline/20 relative overflow-hidden flex items-center justify-center bg-surface-container-lowest">
-                <MonitorSmartphone className="w-16 h-16 text-tertiary/50" />
-              </div>
-            </div>
-            {/* Capability 3 */}
-            <div className="bg-surface p-10 border border-outline-variant/30 group hover:bg-surface-bright transition-colors duration-500">
-              <Megaphone className="w-10 h-10 text-primary mb-6" />
-              <h3 className="font-headline-sm text-headline-sm mb-4">{dict.capabilities.ads}</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-6">
-                {dict.capabilities.adsDesc}
-              </p>
-              <div className="h-32 border border-outline/20 relative overflow-hidden flex items-center justify-center bg-surface-container-lowest">
-                <LineChart className="w-16 h-16 text-tertiary/50" />
-              </div>
-            </div>
-            {/* Capability 4 */}
-            <div className="bg-surface p-10 border border-outline-variant/30 group hover:bg-surface-bright transition-colors duration-500">
-              <LayoutTemplate className="w-10 h-10 text-primary mb-6" />
-              <h3 className="font-headline-sm text-headline-sm mb-4">{dict.capabilities.customCms}</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-6">
-                {dict.capabilities.customCmsDesc}
-              </p>
-              <div className="h-32 border border-outline/20 relative overflow-hidden flex items-center justify-center bg-surface-container-lowest">
-                <FileText className="w-16 h-16 text-tertiary/50" />
-              </div>
-            </div>
-            {/* Capability 5 */}
-            <div className="bg-surface p-10 border border-outline-variant/30 group hover:bg-surface-bright transition-colors duration-500">
-              <Bot className="w-10 h-10 text-primary mb-6" />
-              <h3 className="font-headline-sm text-headline-sm mb-4">{dict.capabilities.aiAuto}</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-6">
-                {dict.capabilities.aiAutoDesc}
-              </p>
-              <div className="h-32 border border-outline/20 relative overflow-hidden flex items-center justify-center bg-surface-container-lowest">
-                <Workflow className="w-16 h-16 text-tertiary/50" />
-              </div>
-            </div>
-          </div>
+          <ServiceCarousel
+            prevLabel={dict.capabilities.prevSlide}
+            nextLabel={dict.capabilities.nextSlide}
+            items={[
+              {
+                icon: <Blocks className="w-10 h-10 text-primary mb-6" />,
+                previewIcon: <Network className="w-16 h-16 text-tertiary/50" />,
+                title: dict.capabilities.webApps,
+                desc: dict.capabilities.webAppsDesc,
+              },
+              {
+                icon: <AppWindow className="w-10 h-10 text-primary mb-6" />,
+                previewIcon: <MonitorSmartphone className="w-16 h-16 text-tertiary/50" />,
+                title: dict.capabilities.webDev,
+                desc: dict.capabilities.webDevDesc,
+              },
+              {
+                icon: <Megaphone className="w-10 h-10 text-primary mb-6" />,
+                previewIcon: <LineChart className="w-16 h-16 text-tertiary/50" />,
+                title: dict.capabilities.ads,
+                desc: dict.capabilities.adsDesc,
+              },
+              {
+                icon: <LayoutTemplate className="w-10 h-10 text-primary mb-6" />,
+                previewIcon: <FileText className="w-16 h-16 text-tertiary/50" />,
+                title: dict.capabilities.customCms,
+                desc: dict.capabilities.customCmsDesc,
+              },
+              {
+                icon: <Bot className="w-10 h-10 text-primary mb-6" />,
+                previewIcon: <Workflow className="w-16 h-16 text-tertiary/50" />,
+                title: dict.capabilities.aiAuto,
+                desc: dict.capabilities.aiAutoDesc,
+              },
+            ]}
+          />
         </div>
       </section>
 
