@@ -13,6 +13,8 @@ type NavLabels = {
   work: string;
   pricing: string;
   connect: string;
+  openMenu: string;
+  closeMenu: string;
 };
 
 type SiteHeaderProps = {
@@ -83,7 +85,7 @@ export default function SiteHeader({
           type="button"
           className="lg:hidden text-primary p-2 -mr-2"
           aria-expanded={menuOpen}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-label={menuOpen ? nav.closeMenu : nav.openMenu}
           onClick={() => setMenuOpen((open) => !open)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}

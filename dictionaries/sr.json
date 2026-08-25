@@ -1,11 +1,27 @@
 {
+  "meta": {
+    "home": {
+      "title": "Kreiranje Značajnih Digitalnih Rešenja",
+      "description": "Prilagođene web aplikacije, websajtovi i strateško Meta oglašavanje za fokusiran rast na tržištu."
+    },
+    "services": {
+      "title": "Usluge",
+      "description": "Izrada web sajtova, namenske web aplikacije i Meta oglašavanje zasnovano na analitici, prilagođeno vašem poslovanju."
+    },
+    "archive": {
+      "title": "Radovi",
+      "description": "Naša kolekcija radova u kojima smo učestvovali u realizaciji — web aplikacije, e-commerce sajtovi i digitalne platforme."
+    }
+  },
   "nav": {
     "home": "Početna",
     "services": "Usluge",
     "work": "Radovi",
     "pricing": "Cenovnik",
     "connect": "Kontakt",
-    "letsTalk": "Zakažite Razgovor"
+    "letsTalk": "Zakažite Razgovor",
+    "openMenu": "Otvori meni",
+    "closeMenu": "Zatvori meni"
   },
   "hero": {
     "title": "KREIRANJE\nZNAČAJNIH\nDIGITALNIH\nREŠENJA.",

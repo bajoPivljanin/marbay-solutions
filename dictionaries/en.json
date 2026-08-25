@@ -1,11 +1,27 @@
 {
+  "meta": {
+    "home": {
+      "title": "Crafting Meaningful Digital Utilities",
+      "description": "Bespoke web applications, websites, and strategic Meta advertising for focused growth."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Website development, bespoke web applications, and analytics-driven Meta advertising tailored to your business."
+    },
+    "archive": {
+      "title": "Work",
+      "description": "A collection of projects we have been involved in creating — web applications, e-commerce sites, and digital platforms."
+    }
+  },
   "nav": {
     "home": "Home",
     "services": "Services",
     "work": "Work",
     "pricing": "Pricing",
     "connect": "Connect",
-    "letsTalk": "Let's Talk"
+    "letsTalk": "Let's Talk",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "title": "CRAFTING\nMEANINGFUL\nDIGITAL\nUTILITIES.",

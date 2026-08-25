@@ -5,6 +5,19 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "../../components/SiteFooter";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/i18n.config";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
+  return {
+    title: dict.meta.services.title,
+    description: dict.meta.services.description,
+    alternates: { canonical: `/${lang}/services` },
+    openGraph: { title: dict.meta.services.title, description: dict.meta.services.description, url: `/${lang}/services` },
+  };
+}
 
 export default async function ServicesPage({ params }: { params: Promise<{ lang: Locale }> }) {
   const resolvedParams = await params;

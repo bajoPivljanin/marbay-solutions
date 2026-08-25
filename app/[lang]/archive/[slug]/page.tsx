@@ -7,6 +7,27 @@ import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "../../../components/SiteFooter";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/i18n.config";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string; lang: Locale }> }): Promise<Metadata> {
+  const { slug, lang } = await params;
+  const project = projects.find((p) => p.slug === slug);
+  if (!project) return {};
+
+  const description = (project.shortDescription as any)[lang] || project.shortDescription;
+
+  return {
+    title: project.title,
+    description,
+    alternates: { canonical: `/${lang}/archive/${slug}` },
+    openGraph: {
+      title: project.title,
+      description,
+      url: `/${lang}/archive/${slug}`,
+      images: [{ url: project.image }],
+    },
+  };
+}
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string; lang: Locale }> }) {
   const resolvedParams = await params;
