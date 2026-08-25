@@ -84,5 +84,22 @@ export const projects = [
     aspectRatio: "aspect-[4/3]",
     technologies: ["PHP", "MySQL", "Bootstrap", "PHPMailer"],
     liveUrl: "https://momcadija.stud.vts.su.ac.rs/sportski_tereni/"
+  },
+  {
+    slug: "meta-ads-platform",
+    title: "Meta Ads Platform",
+    type: "Web App",
+    category: "Web App",
+    shortDescription: {
+      en: "An all-in-one dashboard for managing Meta ad campaigns, combining server-side attribution, analytics, and automation.",
+      sr: "Objedinjena platforma za upravljanje Meta kampanjama, koja spaja server-side atribuciju, analitiku i automatizaciju."
+    },
+    fullDescription: {
+      en: "An all-in-one platform for managing Meta ad campaigns, built to replace juggling Ads Manager, spreadsheets, and WooCommerce order exports with a single dashboard.\n\nOn the backend, a FastAPI service syncs campaign data through the Meta Marketing API, sends purchase events server-side through the Meta Conversions API for more reliable attribution, and listens for WooCommerce order webhooks to tie revenue directly back to the ad that drove it. The React dashboard surfaces spend, ROAS, and CPA at a glance, lets automation rules pause or scale campaigns based on performance, and breaks down which ad creatives are actually converting.",
+      sr: "Objedinjena platforma za upravljanje Meta kampanjama, napravljena da zameni žongliranje između Ads Managera, tabela i WooCommerce izveštaja jednim dashboardom.\n\nNa bekendu, FastAPI servis sinhronizuje podatke o kampanjama preko Meta Marketing API-ja, šalje events o kupovini server-side preko Meta Conversions API-ja radi pouzdanije atribucije, i osluškuje WooCommerce webhookove kako bi prihod direktno povezao sa reklamom koja ga je donela. React dashboard prikazuje potrošnju, ROAS i CPA na jednom mestu, omogućava automatizovana pravila koja pauziraju ili skaliraju kampanje na osnovu performansi, i razlaže koje kreative zaista konvertuju."
+    },
+    image: "/projects/meta-ads-platform/meta-ads-platform-marbay.png",
+    aspectRatio: "aspect-[4/3]",
+    technologies: ["Python", "FastAPI", "React", "PostgreSQL", "Redis"]
   }
 ];
