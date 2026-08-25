@@ -36,7 +36,11 @@
     "webDev": "WEBSITE DEVELOPMENT",
     "webDevDesc": "High-performance digital storefronts. We prioritize speed, accessibility, and an aesthetic that communicates brand value instantly.",
     "ads": "META ADVERTISING",
-    "adsDesc": "Strategic, data-driven campaigns designed to engage specific audiences. We blend compelling creative with rigorous analytical oversight."
+    "adsDesc": "Strategic, data-driven campaigns designed to engage specific audiences. We blend compelling creative with rigorous analytical oversight.",
+    "customCms": "CUSTOM CMS DEVELOPMENT",
+    "customCmsDesc": "Bespoke content management systems tailored to your editorial process — free of the bloat that comes with generic platforms.",
+    "aiAuto": "AI AUTOMATION",
+    "aiAutoDesc": "Automating repetitive business processes with artificial intelligence, from internal workflows to customer support."
   },
   "pricing": {
     "title": "Investment Plans",

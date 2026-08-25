@@ -9,7 +9,11 @@ import {
   LineChart,
   ArrowRight,
   Mail,
-  MapPin
+  MapPin,
+  LayoutTemplate,
+  FileText,
+  Bot,
+  Workflow
 } from "lucide-react";
 import PricingComparison from "../components/PricingComparison";
 import SiteHeader from "../components/SiteHeader";
@@ -88,6 +92,28 @@ export default async function Page({ params }: { params: Promise<{ lang: Locale 
               </p>
               <div className="h-32 border border-outline/20 relative overflow-hidden flex items-center justify-center bg-surface-container-lowest">
                 <LineChart className="w-16 h-16 text-tertiary/50" />
+              </div>
+            </div>
+            {/* Capability 4 */}
+            <div className="bg-surface p-10 border border-outline-variant/30 group hover:bg-surface-bright transition-colors duration-500">
+              <LayoutTemplate className="w-10 h-10 text-primary mb-6" />
+              <h3 className="font-headline-sm text-headline-sm mb-4">{dict.capabilities.customCms}</h3>
+              <p className="font-body-md text-body-md text-on-surface-variant mb-6">
+                {dict.capabilities.customCmsDesc}
+              </p>
+              <div className="h-32 border border-outline/20 relative overflow-hidden flex items-center justify-center bg-surface-container-lowest">
+                <FileText className="w-16 h-16 text-tertiary/50" />
+              </div>
+            </div>
+            {/* Capability 5 */}
+            <div className="bg-surface p-10 border border-outline-variant/30 group hover:bg-surface-bright transition-colors duration-500">
+              <Bot className="w-10 h-10 text-primary mb-6" />
+              <h3 className="font-headline-sm text-headline-sm mb-4">{dict.capabilities.aiAuto}</h3>
+              <p className="font-body-md text-body-md text-on-surface-variant mb-6">
+                {dict.capabilities.aiAutoDesc}
+              </p>
+              <div className="h-32 border border-outline/20 relative overflow-hidden flex items-center justify-center bg-surface-container-lowest">
+                <Workflow className="w-16 h-16 text-tertiary/50" />
               </div>
             </div>
           </div>

@@ -36,7 +36,11 @@
     "webDev": "IZRADA WEB SAJTOVA",
     "webDevDesc": "Digitalni izlozi visokih performansi. Prioritet su brzina, dostupnost i estetika koja trenutno prenosi vrednost brenda na posetioce.",
     "ads": "META OGLAŠAVANJE",
-    "adsDesc": "Strateške kampanje zasnovane na analitici. Donose idealan balans izuzetne kreative uz strogi analitički nadzor za najbolje rezultate."
+    "adsDesc": "Strateške kampanje zasnovane na analitici. Donose idealan balans izuzetne kreative uz strogi analitički nadzor za najbolje rezultate.",
+    "customCms": "IZRADA CUSTOM CMS-A",
+    "customCmsDesc": "Namenski sistemi za upravljanje sadržajem, skrojeni prema vašem uređivačkom procesu — bez nepotrebnog balasta generičkih platformi.",
+    "aiAuto": "AI AUTOMATIZACIJA",
+    "aiAutoDesc": "Automatizacija ponavljajućih poslovnih procesa uz pomoć veštačke inteligencije, od radnih tokova do korisničke podrške."
   },
   "pricing": {
     "title": "Planovi Usluga",
