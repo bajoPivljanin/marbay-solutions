@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 type ActivePage = "home" | "services" | "archive";
+type SectionHash = "pricing" | "connect";
 
 type NavLabels = {
   home: string;
@@ -40,17 +41,47 @@ export default function SiteHeader({
   ctaHref,
 }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState<SectionHash | null>(null);
 
-  const navLinks: { href: string; label: string; page?: ActivePage }[] = [
+  useEffect(() => {
+    const sectionIds: SectionHash[] = ["pricing", "connect"];
+    const sections = sectionIds
+      .map((id) => ({ id, el: document.getElementById(id) }))
+      .filter((entry): entry is { id: SectionHash; el: HTMLElement } => entry.el !== null);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting);
+        if (visible.length === 0) {
+          setActiveHash(null);
+          return;
+        }
+        const topMost = visible.reduce((a, b) => (a.boundingClientRect.top < b.boundingClientRect.top ? a : b));
+        const match = sections.find((entry) => entry.el === topMost.target);
+        setActiveHash(match?.id ?? null);
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+
+    sections.forEach(({ el }) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const navLinks: { href: string; label: string; page?: ActivePage; hash?: SectionHash }[] = [
     { href: `/${lang}`, label: nav.home, page: "home" },
     { href: `/${lang}/services`, label: nav.services, page: "services" },
     { href: `/${lang}/archive`, label: nav.work, page: "archive" },
-    { href: `/${lang}/#pricing`, label: nav.pricing },
-    { href: `/${lang}/#connect`, label: nav.connect },
+    { href: `/${lang}/#pricing`, label: nav.pricing, hash: "pricing" },
+    { href: `/${lang}/#connect`, label: nav.connect, hash: "connect" },
   ];
 
-  const linkClass = (page?: ActivePage) =>
-    `${linkBase} ${activePage === page ? linkActive : linkInactive}`;
+  const isLinkActive = (page?: ActivePage, hash?: SectionHash) =>
+    activeHash ? hash === activeHash : page !== undefined && page === activePage;
+
+  const linkClass = (page?: ActivePage, hash?: SectionHash) =>
+    `${linkBase} ${isLinkActive(page, hash) ? linkActive : linkInactive}`;
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -66,8 +97,8 @@ export default function SiteHeader({
         </Link>
 
         <nav className="hidden lg:flex gap-6 xl:gap-gutter items-center shrink min-w-0">
-          {navLinks.map(({ href, label, page }) => (
-            <Link key={href} className={linkClass(page)} href={href}>
+          {navLinks.map(({ href, label, page, hash }) => (
+            <Link key={href} className={linkClass(page, hash)} href={href}>
               {label}
             </Link>
           ))}
@@ -94,10 +125,10 @@ export default function SiteHeader({
 
       {menuOpen && (
         <nav className="lg:hidden border-t border-outline-variant/30 dark:border-outline/20 bg-surface dark:bg-on-surface px-margin-mobile py-6 flex flex-col gap-5">
-          {navLinks.map(({ href, label, page }) => (
+          {navLinks.map(({ href, label, page, hash }) => (
             <Link
               key={href}
-              className={linkClass(page)}
+              className={linkClass(page, hash)}
               href={href}
               onClick={closeMenu}
             >
