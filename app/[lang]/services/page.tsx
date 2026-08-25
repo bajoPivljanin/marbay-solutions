@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowLeft, MonitorSmartphone, Search, Layout, Target, PenTool, LineChart, GitMerge, Code, Database } from "lucide-react";
+import { ArrowRight, ArrowLeft, MonitorSmartphone, Search, Layout, Target, PenTool, LineChart, GitMerge, Code, Database, LayoutTemplate, ShieldCheck, FileText, Workflow, Bot, Webhook } from "lucide-react";
 import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "../../components/SiteFooter";
 import { getDictionary } from "@/lib/dictionary";
@@ -173,6 +173,82 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                     <Database className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
                     <div>
                       <span className="font-body-md font-medium text-on-surface block">{dict.services.dbArch}</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            {/* Service 4 */}
+            <article className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter items-start pt-16 md:pt-0 border-t border-outline-variant/30 md:border-t-0">
+              <div className="md:col-span-1">
+                <span className="font-label-caps text-label-caps text-tertiary-fixed-dim">04</span>
+              </div>
+              <div className="md:col-span-6">
+                <h2 className="font-headline-md text-3xl md:text-4xl text-primary mb-6">{dict.services.cmsTitle}</h2>
+                <p className="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                  {dict.services.cmsDesc}
+                </p>
+              </div>
+              <div className="md:col-span-4 md:col-start-9">
+                <h3 className="font-label-caps text-[10px] uppercase tracking-widest text-tertiary mb-6 border-b border-outline-variant/30 pb-2">
+                  {dict.services.deliverables}
+                </h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <LayoutTemplate className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.cmsContentModel}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <ShieldCheck className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.cmsRoles}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <FileText className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.cmsWorkflow}</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            {/* Service 5 */}
+            <article className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter items-start pt-16 md:pt-0 border-t border-outline-variant/30 md:border-t-0">
+              <div className="md:col-span-1">
+                <span className="font-label-caps text-label-caps text-tertiary-fixed-dim">05</span>
+              </div>
+              <div className="md:col-span-6">
+                <h2 className="font-headline-md text-3xl md:text-4xl text-primary mb-6">{dict.services.aiAutoTitle}</h2>
+                <p className="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                  {dict.services.aiAutoDesc}
+                </p>
+              </div>
+              <div className="md:col-span-4 md:col-start-9">
+                <h3 className="font-label-caps text-[10px] uppercase tracking-widest text-tertiary mb-6 border-b border-outline-variant/30 pb-2">
+                  {dict.services.deliverables}
+                </h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <Workflow className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.aiWorkflow}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <Bot className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.aiChatbots}</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <Webhook className="w-5 h-5 text-tertiary shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <span className="font-body-md font-medium text-on-surface block">{dict.services.aiIntegrations}</span>
                     </div>
                   </li>
                 </ul>
