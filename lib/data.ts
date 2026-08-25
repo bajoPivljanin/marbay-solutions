@@ -66,5 +66,23 @@ export const projects = [
     image: "/projects/scent.rs/scent-marbay.png",
     aspectRatio: "aspect-[4/3]",
     technologies: ["PHP", "WordPress", "SQL"]
+  },
+  {
+    slug: "sportski-tereni",
+    title: "Sportski Tereni",
+    type: "Web App",
+    category: "Web App",
+    shortDescription: {
+      en: "A reservation platform for booking basketball, football, tennis, and padel courts in just a few clicks.",
+      sr: "Platforma za rezervaciju košarkaških, fudbalskih, teniskih i padel terena u samo par klikova."
+    },
+    fullDescription: {
+      en: "A full-stack sports court reservation system built from the ground up in PHP. Visitors browse available basketball, football, tennis, and padel courts and reserve a time slot in seconds, with email verification and password recovery handled through PHPMailer.\n\nThe platform supports three roles: regular users manage their bookings and profile, employees confirm arrivals and update court status, and admins manage the full court catalog, images, and user accounts through a dedicated panel.",
+      sr: "Rezervacioni sistem za sportske terene, u potpunosti razvijen u PHP-u. Posetioci pregledaju dostupne košarkaške, fudbalske, teniske i padel terene i rezervišu termin za par sekundi, uz verifikaciju email adrese i oporavak lozinke preko PHPMailer-a.\n\nPlatforma podržava tri uloge: korisnici upravljaju svojim rezervacijama i profilom, zaposleni potvrđuju dolaske i ažuriraju status terena, dok administratori kroz poseban panel upravljaju celokupnim katalogom terena, slikama i korisničkim nalozima."
+    },
+    image: "/projects/sportski-tereni/sportski-tereni-marbay.png",
+    aspectRatio: "aspect-[4/3]",
+    technologies: ["PHP", "MySQL", "Bootstrap", "PHPMailer"],
+    liveUrl: "https://momcadija.stud.vts.su.ac.rs/sportski_tereni/"
   }
 ];

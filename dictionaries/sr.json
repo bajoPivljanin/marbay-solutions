@@ -115,7 +115,8 @@
   "common": {
     "backHome": "Nazad na Početnu",
     "backArchive": "Nazad na Arhivu",
-    "viewProject": "Pročitaj više"
+    "viewProject": "Pročitaj više",
+    "visitSite": "Poseti Sajt"
   },
   "services": {
     "discipline": "Naša Disciplina",

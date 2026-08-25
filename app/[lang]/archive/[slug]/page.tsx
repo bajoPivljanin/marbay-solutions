@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { projects } from "@/lib/data";
 import { notFound } from "next/navigation";
 import SiteHeader from "../../../components/SiteHeader";
@@ -51,6 +51,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   ))}
                 </div>
               </div>
+              {(project as any).liveUrl && (
+                <a
+                  href={(project as any).liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-10 inline-flex items-center gap-2 bg-on-surface text-surface font-label-caps text-label-caps uppercase px-6 py-3 rounded-full w-fit hover:bg-primary transition-colors"
+                >
+                  {dict.common.visitSite} <ExternalLink className="w-4 h-4" />
+                </a>
+              )}
             </div>
             <div className="lg:col-span-7">
               <div className="relative w-full border border-outline/10 aspect-[4/3] overflow-hidden shadow-xl shadow-surface-container-lowest/50">

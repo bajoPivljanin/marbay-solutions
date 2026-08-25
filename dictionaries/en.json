@@ -115,7 +115,8 @@
   "common": {
     "backHome": "Back to Home",
     "backArchive": "Back to Archive",
-    "viewProject": "Read more"
+    "viewProject": "Read more",
+    "visitSite": "Visit Site"
   },
   "services": {
     "discipline": "Our Discipline",
